@@ -1,8 +1,8 @@
 # ERD
-![CLD](Images/Klassendiagramm.png)
+![CLD](Images/CLD_hell.png)
 
 # CLD
-![ERD](Images/ERD.png)
+![ERD](Images/ERD_hell.png)
 
 # 1819_4bhif_nvs_assignment06_jpa
 Übungsbeispiel mit individueller Aufgabenstellung zum Thema JPA

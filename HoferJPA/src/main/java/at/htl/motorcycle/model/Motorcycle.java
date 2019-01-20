@@ -20,7 +20,7 @@ public class Motorcycle {
     private Engine engine;
     @OneToOne(cascade = CascadeType.ALL)
     private Transmission transmission;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany
     private List<Purchase> purchases;
 
 

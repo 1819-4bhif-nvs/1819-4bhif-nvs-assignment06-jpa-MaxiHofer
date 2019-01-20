@@ -1,6 +1,7 @@
 package at.htl.motorcycle.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Customer {
@@ -9,8 +10,9 @@ public class Customer {
     private Long id;
     private String firstname;
     private String lastname;
-    @OneToOne
-    private Purchase purchase;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Purchase> purchases;
+
 
     public Customer(String firstname, String lastname) {
         this.firstname = firstname;

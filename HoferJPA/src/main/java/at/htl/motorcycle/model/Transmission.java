@@ -11,13 +11,13 @@ public class Transmission {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private int gearNumber;
+    private int gears;
 
     public Transmission() {
     }
 
-    public Transmission(int gearNumber) {
-        this.gearNumber = gearNumber;
+    public Transmission(int gears) {
+        this.gears = gears;
     }
 
     public Long getId() {
@@ -28,11 +28,11 @@ public class Transmission {
         this.id = id;
     }
 
-    public int getGearNumber() {
-        return gearNumber;
+    public int getGears() {
+        return gears;
     }
 
-    public void setGearNumber(int gearNumber) {
-        this.gearNumber = gearNumber;
+    public void setGears(int gears) {
+        this.gears = gears;
     }
 }

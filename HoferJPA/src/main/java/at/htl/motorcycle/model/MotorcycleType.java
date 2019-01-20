@@ -14,15 +14,15 @@ public class MotorcycleType {
     private Long id;
     private String brand;
     private String model;
-    private LocalDate constructionYear;
+    private LocalDate yearOfConstruction;
 
     public MotorcycleType() {
     }
 
-    public MotorcycleType(String brand, String model, LocalDate constructionYear) {
+    public MotorcycleType(String brand, String model, LocalDate yearOfConstruction) {
         this.brand = brand;
         this.model = model;
-        this.constructionYear = constructionYear;
+        this.yearOfConstruction = yearOfConstruction;
     }
 
     public Long getId() {
@@ -49,11 +49,11 @@ public class MotorcycleType {
         this.model = model;
     }
 
-    public LocalDate getConstructionYear() {
-        return constructionYear;
+    public LocalDate getYearOfConstruction() {
+        return yearOfConstruction;
     }
 
-    public void setConstructionYear(LocalDate constructionYear) {
-        this.constructionYear = constructionYear;
+    public void setYearOfConstruction(LocalDate constructionYear) {
+        this.yearOfConstruction = constructionYear;
     }
 }

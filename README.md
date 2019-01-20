@@ -1,7 +1,7 @@
-# CLD
+# ERD
 ![CLD](Images/Klassendiagramm.png)
 
-# ERD
+# CLD
 ![ERD](Images/ERD.png)
 
 # 1819_4bhif_nvs_assignment06_jpa

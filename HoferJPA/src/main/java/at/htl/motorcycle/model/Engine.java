@@ -3,6 +3,7 @@ package at.htl.motorcycle.model;
 import javax.persistence.*;
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 @NamedQueries({
         @NamedQuery(name = "Engine.findAll", query = "select e from Engine e"),
 })

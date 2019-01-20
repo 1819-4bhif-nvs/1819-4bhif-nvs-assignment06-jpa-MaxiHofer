@@ -1,6 +1,7 @@
 package at.htl.motorcycle.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @NamedQueries({
@@ -19,6 +20,9 @@ public class Motorcycle {
     private Engine engine;
     @OneToOne(cascade = CascadeType.ALL)
     private Transmission transmission;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Purchase> purchases;
+
 
     public Motorcycle() {
     }

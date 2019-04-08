@@ -1,9 +1,6 @@
 package at.htl.motorcycle.business;
 
-import at.htl.motorcycle.model.Engine;
-import at.htl.motorcycle.model.Motorcycle;
-import at.htl.motorcycle.model.MotorcycleType;
-import at.htl.motorcycle.model.Transmission;
+import at.htl.motorcycle.model.*;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
@@ -39,15 +36,22 @@ public class InitBean {
         MotorcycleType ktm = new MotorcycleType("KTM", "1290 Superduke", LocalDate.of(2017,4,15));
         Engine ktmEngine = new Engine(2,1290);
         Transmission ktmTransmission = new Transmission(6);
-        em.persist(new Motorcycle("Orange", 160, ktm,ktmEngine,ktmTransmission));
+        Motorcycle ktmMotorcycle = new Motorcycle("Orange", 160, ktm,ktmEngine,ktmTransmission);
+        addMotorcycle(ktmMotorcycle);
         MotorcycleType honda = new MotorcycleType("Honda","CBR 1000",LocalDate.of(2016,5,3));
         Engine hondaEngine = new Engine(4,1000);
         Transmission hondaTransmission = new Transmission(5);
-        em.persist(new Motorcycle("Red",130,honda,hondaEngine,hondaTransmission));
+        Motorcycle hondaMotorcycle = new Motorcycle("Red",130,honda,hondaEngine,hondaTransmission);
+        addMotorcycle(hondaMotorcycle);
         MotorcycleType yamaha = new MotorcycleType("Yamaha", "R1",LocalDate.of(2018,10,24));
         Engine yamahaEngine = new Engine(2,1200);
         Transmission yamahaTransmission = new Transmission(6);
-        em.persist(new Motorcycle("Blue",140, yamaha,yamahaEngine,yamahaTransmission));
+        Motorcycle yamahaMotorcycle = new Motorcycle("Blue",140, yamaha,yamahaEngine,yamahaTransmission);
+        addMotorcycle(yamahaMotorcycle);
+        Customer hans = new Customer("Hans","Huber");
+        em.persist(hans);
+        Purchase purchase = new Purchase(hans,ktmMotorcycle);
+        em.persist(purchase);
     }
 
     public void addMotorcycle(Motorcycle motorcycle) {
